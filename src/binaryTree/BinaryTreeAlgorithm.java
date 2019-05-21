@@ -2,6 +2,11 @@ package binaryTree;
 
 import java.util.*;
 
+/**
+ * 前向分词正大匹配法 NLP 分词算法中的一种
+ * @author jianan
+ * @Time 2019-05-21 23:53:01
+ */
 public class BinaryTreeAlgorithm {
     /*根据二叉树的顺序数组存储，构造二叉树链式存储*/
     public static TreeNode generateTreeNode(Integer[] nodeValueArr,Integer arrIndex){
@@ -73,6 +78,15 @@ public class BinaryTreeAlgorithm {
             }
         }
         System.out.println("深度优先遍历的结果是："+valueList);
+    }
+
+    private static Integer[] nodeValueArr={1,3,5,null,4,null,7,null,null,8,12,null,null,19};//二叉树的顺序存储结构
+
+    public static void main(String[] args) {
+        TreeNode firstTreeNode=BinaryTreeAlgorithm.generateTreeNode(nodeValueArr,0);//根据二叉树的数组存储结构，生成二叉树，返回首节点
+        //BinaryTreeAlgorithm.getTargetDirectionAndTargetIndexNodeValue(firstTreeNode,"left",1);//不断取第targetNum个“左”或“右”子树
+        BinaryTreeAlgorithm.doBreadthFirstSearch(firstTreeNode);//广度优先遍历
+        BinaryTreeAlgorithm.doDepthFirstSearch(firstTreeNode);//深度优先遍历
     }
 }
 

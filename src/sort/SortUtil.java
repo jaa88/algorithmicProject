@@ -1,13 +1,13 @@
 package sort;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
- * Created by jianan on 2019/02/02
- * 工具类应该返回排序后的数组，这是练习，所以直接在每个方法内部打印出来了
+ * 冒泡排序 插入排序 选择排序
+ * @author jianan
+ * @Time 2019-05-20 22:23:09
  */
 public class SortUtil {
+    private static Integer[] beforeSortArr={3,1,2,4,8,9,13,5,7,2,88,69};//待排序数组
+
     /*冒泡排序----将最大(小)的不断往后推，每次外部循环结束，即可确认一个元素的位置*/
     public static void doBubbleSort(Integer[] needSortArr){
         for(int i=0;i<needSortArr.length;i++){//外层每一次遍历，确定第length-i-1位置的值
@@ -19,7 +19,7 @@ public class SortUtil {
                 }
             }
         }
-        System.out.print("排序后的数组为：");
+        System.out.print("冒泡排序 排序后的数组为：");
         for(int i=0;i<needSortArr.length;i++){
             System.out.print(needSortArr[i]+" ");
         }
@@ -38,7 +38,7 @@ public class SortUtil {
                 }
             }
         }
-        System.out.print("排序后的数组为：");
+        System.out.print("插入排序 排序后的数组为：");
         for(int i=0;i<needSortArr.length;i++){
             System.out.print(needSortArr[i]+" ");
         }
@@ -59,11 +59,18 @@ public class SortUtil {
                 needSortArr[targetIndex]=temp;
             }
         }
-        System.out.print("排序后的数组为：");
+        System.out.print("选择 排序后的数组为：");
         for(int i=0;i<needSortArr.length;i++){
             System.out.print(needSortArr[i]+" ");
         }
     }
 
-
+    public static void main(String[] args) {
+        SortUtil.doBubbleSort(beforeSortArr);//冒泡排序
+        System.out.println();//换行
+        SortUtil.doInsertSort(beforeSortArr);//插入排序
+        System.out.println();//换行
+        SortUtil.doSelectSort(beforeSortArr);//选择排序
+        System.out.println();//换行
+    }
 }
