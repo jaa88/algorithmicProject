@@ -1,4 +1,4 @@
-package binaryTree;
+package a_001;
 
 public class TreeNode {
     private TreeNode leftTreeNode;//左节点
