@@ -9,7 +9,7 @@ public class SortUtil {
     private static Integer[] beforeSortArr={3,1,2,4,8,9,13,5,7,2,88,69};//待排序数组
 
     /*冒泡排序----将最大(小)的不断往后推，每次外部循环结束，即可确认一个元素的位置*/
-    public static void doBubbleSort(Integer[] needSortArr){
+    public static Integer[] doBubbleSort(Integer[] needSortArr){
         for(int i=0;i<needSortArr.length;i++){//外层每一次遍历，确定第length-i-1位置的值
             for(int j=0;j<needSortArr.length-i-1;j++){//内层的每次遍历，是将最大的不断往后推
                 if(needSortArr[j]>needSortArr[j+1]){
@@ -19,14 +19,11 @@ public class SortUtil {
                 }
             }
         }
-        System.out.print("冒泡排序 排序后的数组为：");
-        for(int i=0;i<needSortArr.length;i++){
-            System.out.print(needSortArr[i]+" ");
-        }
+        return needSortArr;
     }
 
     /*插入排序----从第2个元素开始，不断往前找他该放在哪儿*/
-    public static void doInsertSort(Integer[] needSortArr){
+    public static Integer[] doInsertSort(Integer[] needSortArr){
         for(int i=1;i<needSortArr.length;i++){
             Integer temp=needSortArr[i];
             for(int j=i;j>0;j--){
@@ -38,14 +35,11 @@ public class SortUtil {
                 }
             }
         }
-        System.out.print("插入排序 排序后的数组为：");
-        for(int i=0;i<needSortArr.length;i++){
-            System.out.print(needSortArr[i]+" ");
-        }
+        return needSortArr;
     }
 
     /*选择排序----从第1个位置起，不断找最大（小）的放在上面*/
-    public static void doSelectSort(Integer[] needSortArr){
+    public static Integer[] doSelectSort(Integer[] needSortArr){
         for(int i=0;i<needSortArr.length-1;i++){
             Integer targetIndex=i;//用于存放找到的最大（小）的数组下标
             for(int j=i+1;j<needSortArr.length;j++){
@@ -59,18 +53,26 @@ public class SortUtil {
                 needSortArr[targetIndex]=temp;
             }
         }
-        System.out.print("选择 排序后的数组为：");
-        for(int i=0;i<needSortArr.length;i++){
-            System.out.print(needSortArr[i]+" ");
-        }
+        return needSortArr;
     }
 
     public static void main(String[] args) {
-        SortUtil.doBubbleSort(beforeSortArr);//冒泡排序
-        System.out.println();//换行
-        SortUtil.doInsertSort(beforeSortArr);//插入排序
-        System.out.println();//换行
-        SortUtil.doSelectSort(beforeSortArr);//选择排序
-        System.out.println();//换行
+        System.out.println("冒泡排序结果：");//换行
+        Integer[] afterBubbleSortArr=SortUtil.doBubbleSort(beforeSortArr);//冒泡排序
+        for(int i=0;i<afterBubbleSortArr.length;i++){
+            System.out.print(afterBubbleSortArr[i]+" ");
+        }
+        System.out.println();
+        System.out.println("插入排序结果：");//换行
+        afterBubbleSortArr=SortUtil.doInsertSort(beforeSortArr);//插入排序
+        for(int i=0;i<afterBubbleSortArr.length;i++){
+            System.out.print(afterBubbleSortArr[i]+" ");
+        }
+        System.out.println();
+        System.out.println("选择排序结果：");//换行
+        afterBubbleSortArr=SortUtil.doSelectSort(beforeSortArr);//选择排序
+        for(int i=0;i<afterBubbleSortArr.length;i++){
+            System.out.print(afterBubbleSortArr[i]+" ");
+        }
     }
 }
