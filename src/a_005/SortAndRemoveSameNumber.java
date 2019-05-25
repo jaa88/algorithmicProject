@@ -46,24 +46,27 @@ public class SortAndRemoveSameNumber {
         System.out.println("请输入：");
         Scanner s=new Scanner(System.in);
         //需要去重以及排序的数量
-        int allNum=s.nextInt();
-        //通过set去重
-        Set<Integer> allNumSet=new HashSet<>();
-        for(int i=0;i<allNum;i++){
-            allNumSet.add(s.nextInt());
+        while (s.hasNextInt()){//可能有多组数据
+            int allNum=s.nextInt();
+            //通过set去重
+            Set<Integer> allNumSet=new HashSet<>();
+            for(int i=0;i<allNum;i++){
+                allNumSet.add(s.nextInt());
+            }
+            //新建数组，用于排序以及输出
+            Integer[] allNumArr=new Integer[allNumSet.size()];
+            //遍历set 取值赋予数组
+            Iterator<Integer> iterator=allNumSet.iterator();
+            int curAddIndex=0;
+            while (iterator.hasNext()){
+                allNumArr[curAddIndex++]=iterator.next();
+            }
+            //通过排序算法进行排序
+            Integer[] afterSortArr= SortUtil.doBubbleSort(allNumArr);
+            for(int i=0;i<afterSortArr.length;i++){
+                System.out.println(afterSortArr[i]);
+            }
         }
-        //新建数组，用于排序以及输出
-        Integer[] allNumArr=new Integer[allNumSet.size()];
-        //遍历set 取值赋予数组
-        Iterator<Integer> iterator=allNumSet.iterator();
-        int curAddIndex=0;
-        while (iterator.hasNext()){
-            allNumArr[curAddIndex++]=iterator.next();
-        }
-        //通过排序算法进行排序
-        Integer[] afterSortArr= SortUtil.doBubbleSort(allNumArr);
-        for(int i=0;i<afterSortArr.length;i++){
-            System.out.println(afterSortArr[i]);
-        }
+
     }
 }
