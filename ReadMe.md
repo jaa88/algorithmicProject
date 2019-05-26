@@ -32,5 +32,6 @@
          字符串分串(SplitString)
          十六进制转十进制(HexadecimalToDecimalism)
          求一个数是质数的因子(GetPrimeDivisor)
-         求一个数的质因子(待完成 GetPrimeDivisor2)
+         求一个数的质因子(GetPrimeDivisor2)
+         取近似值（DoubleRounded）
         
