@@ -34,4 +34,6 @@
          求一个数是质数的因子(GetPrimeDivisor)
          求一个数的质因子(GetPrimeDivisor2)
          取近似值（DoubleRounded）
+         合并表记录（ConsolidateTableRecord）
+         提取不重复的数（ExtractNonRepeatIntegers)
         
