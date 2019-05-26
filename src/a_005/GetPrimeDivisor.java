@@ -1,5 +1,7 @@
 package a_005;
 
+import a_004.CommonUtil;
+
 import java.util.*;
 
 /**
@@ -18,10 +20,10 @@ public class GetPrimeDivisor {
         long sqrtNeedDealNum=(long)Math.floor(Math.sqrt((double) needDealNum));
         for(long i=2;i<sqrtNeedDealNum;i++){
             if(needDealNum%i==0){
-                if(isPrime(i)){
+                if(CommonUtil.isPrimeLong(i)){
                     divisorSet.add(i);
                 }
-                if(isPrime(needDealNum/i)){
+                if(CommonUtil.isPrimeLong(needDealNum/i)){
                     divisorSet.add(needDealNum/i);
                 }
             }
@@ -34,18 +36,5 @@ public class GetPrimeDivisor {
         for(Long  primeDivisor:primeDivisorList){
             System.out.println(primeDivisor);
         }
-    }
-
-    //是否是质数 从2-sqrt(judgeNum)有可整除的则为合数，否则质数
-    public static boolean isPrime(long judgeNum){
-        boolean primeFlag=true;
-        long sqrtJudgeNum=(long)Math.floor(Math.sqrt((double) judgeNum));
-        for(int i=2;i<=sqrtJudgeNum;i++){
-            if(judgeNum%i==0){
-                primeFlag=false;
-                break;
-            }
-        }
-        return primeFlag;
     }
 }

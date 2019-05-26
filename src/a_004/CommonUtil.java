@@ -16,4 +16,30 @@ public class CommonUtil {
         }
         return stringBuffer.toString();
     }
+
+    //是否是质数 从2-sqrt(judgeNum)有可整除的则为合数，否则质数
+    public static boolean isPrimeLong(long judgeNum){
+        boolean primeFlag=true;
+        long sqrtJudgeNum=(long)Math.floor(Math.sqrt((double) judgeNum));
+        for(int i=2;i<=sqrtJudgeNum;i++){
+            if(judgeNum%i==0){
+                primeFlag=false;
+                break;
+            }
+        }
+        return primeFlag;
+    }
+
+    //是否是质数 从2-sqrt(judgeNum)有可整除的则为合数，否则质数
+    public static boolean isPrimeInt(int judgeNum){
+        boolean primeFlag=true;
+        int sqrtJudgeNum=(int)Math.floor(Math.sqrt((double) judgeNum));
+        for(int i=2;i<=sqrtJudgeNum;i++){
+            if(judgeNum%i==0){
+                primeFlag=false;
+                break;
+            }
+        }
+        return primeFlag;
+    }
 }
