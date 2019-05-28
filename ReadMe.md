@@ -42,5 +42,6 @@
          提取一个字符串中不重复的字符数(GetNonRepeatedCharNum)
          数字颠倒（ReverseIntNum)
          字符串反转（ReverseString)
+         句子逆序（ReverseSentence）
          
         
