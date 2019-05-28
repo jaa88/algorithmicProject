@@ -43,5 +43,6 @@
          数字颠倒（ReverseIntNum)
          字符串反转（ReverseString)
          句子逆序（ReverseSentence）
+         求int型正整数在内存中存储时1的个数（ToBinaryDecimal）
          
         
