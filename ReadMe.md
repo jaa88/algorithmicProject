@@ -36,4 +36,8 @@
          取近似值（DoubleRounded）
          合并表记录（ConsolidateTableRecord）
          提取不重复的数（ExtractNonRepeatIntegers)
+         
+（a_005）华为上机基础题
+
+         提取一个字符串中不重复的字符数
         
