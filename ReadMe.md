@@ -9,22 +9,22 @@
 
          前向分词算法
 
-（a_003）工具类
+（a_003）递归与非递归（动态规划）
 
-         排序相关
-            冒泡排序
-            选择排序
-            插入排序
-            
-         通用基础方法
-            字符串翻转
-            求两个整数中的较大者
-         
-（a_004）递归与非递归（动态规划）
-         
          斐波那契数列 递归
-         斐波那契数列 动态规划
-         01背包问题 动态规划
+               斐波那契数列 动态规划
+               01背包问题 动态规划
+         
+（a_004）工具类
+         
+         排序相关
+               冒泡排序
+               选择排序
+               插入排序
+                     
+         通用基础方法
+               字符串翻转
+               求两个整数中的较大者
          
 （a_005）华为上机基础题
 
@@ -39,12 +39,15 @@
          合并表记录（ConsolidateTableRecord）
          提取不重复的数（ExtractNonRepeatIntegers)
          
-（a_005）华为上机基础题
+（a_006）华为上机基础题
 
          提取一个字符串中不重复的字符数(GetNonRepeatedCharNum)
          数字颠倒（ReverseIntNum)
          字符串反转（ReverseString)
          句子逆序（ReverseSentence）
          求int型正整数在内存中存储时1的个数（ToBinaryDecimal）
+         坐标移动（MoveCoordinates）
          
-        
+ （a_007）华为上机中难题
+ 
+         简单错误记录（RecordErrorFileNameAndLineNum）
