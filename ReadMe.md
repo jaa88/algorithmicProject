@@ -51,3 +51,4 @@
  （a_007）华为上机中难题
  
          简单错误记录（RecordErrorFileNameAndLineNum）
+         密码验证合格程序（CheckPassword）
