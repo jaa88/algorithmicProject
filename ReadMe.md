@@ -53,3 +53,4 @@
          简单错误记录（RecordErrorFileNameAndLineNum）
          密码验证合格程序（CheckPassword）
          删除字符串中出现次数最少的字符（RemoveMinNumChar）
+         密码转换（DecryptPassword）
